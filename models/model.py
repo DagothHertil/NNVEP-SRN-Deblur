@@ -263,7 +263,6 @@ class DEBLUR(object):
         if not os.path.exists(output_path):
             os.makedirs(output_path)
         imgsName = sorted(os.listdir(input_path))
-
         H, W = height, width
         inp_chns = 3 if self.args.model == 'color' else 1
         self.batch_size = 1 if self.args.model == 'color' else 3
